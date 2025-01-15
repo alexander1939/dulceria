@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materias</title>
+  <link rel="stylesheet" href="/css/libs.min.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header">
+    <!-- Contenedor Principal del Header -->
+    <div class="header-main">
+      <div class="container">
+
+        <!-- Información principal y menú -->
+        <div class="header-mobile">
+          <!-- Navegación -->
+          <div class="header-nav">
+            <div class="nav-toggle">
+              <span class="nav-toggle__link"></span>
+              <span class="nav-toggle__link"></span>
+              <span class="nav-toggle__link"></span>
+            </div>
+            <div class="header-nav__container">
+              <div class="header-nav__menu">
+                <nav class="nav">
+                  <ul class="nav__list">
+                    <li class="nav__item"><a href="/index.html" class="custom-link" data-section="Home">Home</a></li>
+                    <li class="nav__item">
+                      <a href="/template/gael/gael.html" class="custom-link">Ir a Gael</a>
+                    </li>
+                    <li class="nav__item"><a href="/template/gael/MateriasGael/matematicas.html" class="custom-link" data-section="Matematicas">Matematicas</a></li>
+                    <li class="nav__item"><a href="/template/gael/MateriasGael/ingles.html" class="custom-link" data-section="Ingles">Ingles</a></li>
+                    <li class="nav__item"><a href="/template/gael/MateriasGael/ciencias.html" class="custom-link" data-section="Ciencias">Ciencias</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header-nav__info">
+                <a href="tel:9999912345678">+999 99 1234 5678</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <h1>Materias</h1>
+  <nav>
+    <ul class="custom-breadcrumbs__list" id="breadcrumbs"></ul>
+  </nav>
+  <div class="content">
+    <h2>Materias ofrecidas:</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Matemáticas</h3>
+        <p>Aprende sobre álgebra, cálculo, geometría y más.</p>
+        <a href="matematicas.html">Detalles</a>
+      </div>
+      <div class="card">
+        <h3>Inglés</h3>
+        <p>Mejora tus habilidades en lectura, escritura y conversación.</p>
+        <a href="ingles.html">Detalles</a>
+      </div>
+      <div class="card">
+        <h3>Ciencias</h3>
+        <p>Explora la biología, física, química y más áreas científicas.</p>
+        <a href="ciencias.html">Detalles</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const breadcrumbs = document.getElementById("breadcrumbs");
+
+      // Definir el flujo de navegación esperado
+      const navigationFlow = [
+        { label: "Home", url: "/index.html" },
+        { label: "Gael", url: "/template/gael/gael.html" },
+        { label: "Materias", url: "materias.html" }
+      ];
+
+      // Obtener la URL actual
+      const currentPath = window.location.pathname;
+
+      // Generar el breadcrumb basado en el flujo
+      navigationFlow.forEach((page, index) => {
+        const listItem = document.createElement("li");
+
+        if (currentPath.endsWith(page.url)) {
+          // Último elemento (no es enlace)
+          listItem.textContent = page.label;
+        } else {
+          // Elementos intermedios (enlaces)
+          const link = document.createElement("a");
+          link.href = page.url;
+          link.textContent = page.label;
+          listItem.appendChild(link);
+        }
+
+        breadcrumbs.appendChild(listItem);
+      });
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><!-- jQuery -->
+  <script src="/js/libs.min.js"></script><!-- скрипты библиотек -->
+  <script src="/js/main.js"></script><!-- кастомные скрипты -->
+</body>
+</html>
