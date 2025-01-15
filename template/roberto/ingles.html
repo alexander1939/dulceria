@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materias</title>
+    <title>Ingles</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,50 +37,57 @@
             text-decoration: underline;
         }
 
-        .materias {
+        .summary {
             margin-top: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
         }
 
-        .materia {
-            padding: 15px 20px;
-            border: 1px solid #007bff;
-            border-radius: 5px;
+        .summary table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
             text-align: center;
-            width: 250px;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s, color 0.3s;
-            cursor: pointer;
+            margin-top: 10px;
         }
 
-        .materia:hover {
-            background-color: #007bff;
-            color: white;
+        .summary th, .summary td {
+            border: 1px solid #ddd;
+            padding: 10px;
         }
 
-        .materia a {
-            text-decoration: none;
-            color: inherit;
-            display: block;
+        .summary th {
+            background-color: #f4f4f4;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    
-
     <div class="breadcrumbs">
-        <a href="/index.html">Inicio</a> / <a href="/template/roberto/roberto.html">Roberto</a> / <span>Materias</span>
+        <a href="/index.html">Inicio</a> / 
+        <a href="/template/roberto/roberto.html">Roberto</a> / 
+        <a href="/template/roberto/materias.html">Materia</a> / 
+        <span>Inglés</span>
     </div>
-    <h1>Materias</h1>
+    
+    <h1>Ingles</h1>
 
-    <div class="materias">
-        <div class="materia"><a href="/template/roberto/ingles.html">Ingles</a></div>
-        <div class="materia"><a href="/template/roberto/basesdb.html">Bases de Datos</a></div>
-        <div class="materia"><a href="/template/roberto/desarrolloweb.html">Desarrollo Web</a></div>
+    <div class="summary">
+        <table>
+            <tr>
+                <th>Unidades</th>
+                <th>Horas Teoricas</th>
+                <th>Horas Practucas</th>
+                <th>Total de horas</th>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>20</td>
+                <td>15</td>
+                <td>35</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

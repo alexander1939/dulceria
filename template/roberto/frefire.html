@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roberto</title>
+    <title>Fre Fire</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,7 +23,7 @@
             background-color: #f4f4f4;
             padding: 10px;
             box-sizing: border-box;
-            text-align: leftx;
+            text-align: left;
             font-size: 14px;
         }
 
@@ -37,47 +37,55 @@
             text-decoration: underline;
         }
 
-        .options {
+        .summary {
+            margin-top: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 20px;
         }
 
-        .option {
-            margin: 10px 0;
-            padding: 10px 20px;
-            border: 1px solid #007bff;
-            border-radius: 5px;
+        .summary table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
             text-align: center;
-            width: 150px;
-            background-color: #f9f9f9;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
+            margin-top: 10px;
         }
 
-        .option:hover {
-            background-color: #007bff;
-            color: white;
+        .summary th, .summary td {
+            border: 1px solid #ddd;
+            padding: 10px;
         }
 
-        .option a {
-            text-decoration: none;
-            color: inherit;
+        .summary th {
+            background-color: #f4f4f4;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    
     <div class="breadcrumbs">
-        <a href="/index.html">Home</a> / <span>Roberto</span>
+        <a href="/index.html">Inicio</a> / 
+        <a href="/template/roberto/roberto.html">Roberto</a> / 
+        <a href="/template/roberto/juegos.html">Juegos</a> / 
+        <span>Fre Fire</span>
     </div>
-    <h1>Roberto</h1>
+    
+    <h1>Fre Fire</h1>
 
-    <div class="options">
-        <div class="option"><a href="/template/roberto/materias.html">Materias</a></div>
-        <div class="option"><a href="/template/roberto/juegos.html">Juegos</a></div>
-        <div class="option"><a href="/template/roberto/proyectos.html">Proyectos</a></div>
+    <div class="summary">
+        <table>
+            <tr>
+                <th>Horas Jugadas</th>
+                <th>Nivel de Pase</th>
+                <th>Pases Comprados</th>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>30</td>
+                <td>4</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
