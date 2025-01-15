@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roberto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        .breadcrumbs {
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: leftx;
+            font-size: 14px;
+        }
+
+        .breadcrumbs a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 5px;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .option {
+            margin: 10px 0;
+            padding: 10px 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            text-align: center;
+            width: 150px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .option:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .option a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="breadcrumbs">
+        <a href="/index.html">Home</a> / <span>Roberto</span>
+    </div>
+    <h1>Roberto</h1>
+
+    <div class="options">
+        <div class="option"><a href="/template/roberto/materias.html">Materias</a></div>
+        <div class="option"><a href="#">Juegos</a></div>
+        <div class="option"><a href="#">Proyectos</a></div>
+    </div>
+</body>
+</html>
