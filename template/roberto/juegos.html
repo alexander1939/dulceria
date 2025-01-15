@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        .breadcrumbs {
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .breadcrumbs a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 5px;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        .materias {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .materia {
+            padding: 15px 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            text-align: center;
+            width: 250px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .materia:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .materia a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="breadcrumbs">
+        <a href="/index.html">Inicio</a> / <a href="/template/roberto/roberto.html">Roberto</a> / <span>Juegos</span>
+    </div>
+    <h1>Juegos</h1>
+
+    <div class="materias">
+        <div class="materia"><a href="/template/roberto/fortnite.html">Fornite</a></div>
+        <div class="materia"><a href="/template/roberto/frefire.html">Fre Fire</a></div>
+        <div class="materia"><a href="/template/roberto/clashroyal.html">Clash Royal</a></div>
+    </div>
+</body>
+</html>
