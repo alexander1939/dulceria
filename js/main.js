@@ -320,27 +320,129 @@
 
 })(jQuery);
 
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Obtener todos los enlaces de navegación
-    const navLinks = document.querySelectorAll('.nav__link');
+    const breadcrumbList = document.getElementById('breadcrumbs-list');
 
-    // Obtener el elemento de las migas de pan donde se actualizará la sección activa
-    const breadcrumbCurrent = document.getElementById('current-breadcrumb');
+    function updateBreadcrumb(sections) {
+        breadcrumbList.innerHTML = '';
 
-    // Función para actualizar las migas de pan
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            // Prevenir el comportamiento por defecto del enlace (no cambiar de página)
-            event.preventDefault();
+        sections.forEach((section, index) => {
+            const isLast = index === sections.length - 1;
+            const listItem = document.createElement('li');
+            listItem.classList.add('breadcrumbs__item');
 
-            // Obtener el texto del atributo data-section (nombre de la sección)
-            const sectionName = this.getAttribute('data-section');
-
-            // Actualizar el texto de las migas de pan con la sección seleccionada
-            breadcrumbCurrent.textContent = sectionName;
-
-            // También puedes hacer que el enlace navegue si lo deseas:
-            // window.location.href = this.getAttribute('href');
+            if (!isLast) {
+                listItem.innerHTML = `<a href="${section.href}" class="breadcrumbs__link">${section.name}</a><span class="breadcrumbs__separator"> / </span>`;
+            } else {
+                listItem.innerHTML = `<span class="breadcrumbs__current">${section.name}</span>`;
+            }
+            breadcrumbList.appendChild(listItem);
         });
-    });
+    }
+
+    const currentPath = window.location.pathname;
+
+    let sections = [];
+
+    if (currentPath.includes('materias.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/materias/materias.html', name: 'Materias' }
+        ];
+    } else if (currentPath.includes('materias/matematicas.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/materias/materias.html', name: 'Materias' },
+            { href: '/materias/matematicas.html', name: 'Matemáticas' }
+        ];
+    } else if (currentPath.includes('materias/ciencias.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/materias/materias.html', name: 'Materias' },
+            { href: '/materias/ciencias.html', name: 'Ciencias' }
+        ];
+    } else if (currentPath.includes('materias/historia.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/materias/materias.html', name: 'Materias' },
+            { href: '/materias/historia.html', name: 'Historia' }
+        ];
+
+    } else if (currentPath.includes('juegos.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/juegos/juegos.html', name: 'Juegos' }
+        ];
+    } else if (currentPath.includes('juegos/call.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/juegos/juegos.html', name: 'Juegos' },
+            { href: '/juegos/call.html', name: 'Call of Duty' }
+        ];
+
+    } else if (currentPath.includes('juegos/fornite.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/juegos/juegos.html', name: 'Juegos' },
+            { href: '/juegos/fornite.html', name: 'Fornite' }
+        ];
+
+    } else if (currentPath.includes('juegos/free.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/juegos/juegos.html', name: 'Juegos' },
+            { href: '/juegos/free.html', name: 'free fire' }
+        ];
+    } else if (currentPath.includes('proyectos.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/proyectos/proyectos.html', name: 'Proyectos' }
+        ];
+    } else if (currentPath.includes('proyectos/cuestionario.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/proyectos/proyectos.html', name: 'Proyectos' },
+            { href: '/proyectos/cuestionario.html', name: 'Cuestionario' }
+        ];
+
+    } else if (currentPath.includes('proyectos/mensajes.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/proyectos/proyectos.html', name: 'Proyectos' },
+            { href: '/proyectos/mensajes.html', name: 'Mensajes' }
+        ];
+
+    } else if (currentPath.includes('proyectos/taks.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: '/template/Tavo/tavo.html', name: 'Tavo' },
+            { href: '/template/Tavo/proyectos/proyectos.html', name: 'Proyectos' },
+            { href: '/proyectos/taks.html', name: 'Adminstrador de Tareas' }
+        ];
+
+    } else if (currentPath.includes('tavo.html')) {
+        sections = [
+            { href: '/index.html', name: 'Home' },
+            { href: './template/Tavo/tavo.html', name: 'Tavo' }
+        ];
+
+    } else {
+        sections = [
+            { href: '/index.html', name: 'Home' }
+        ];
+    }
+
+    updateBreadcrumb(sections);
 });
