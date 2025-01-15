@@ -1,0 +1,10 @@
+.sections_per {
+    text-decoration: none;
+    color: black;
+    margin: 100px;
+    padding: 4%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}

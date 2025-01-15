@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/libs.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/tavo.css">
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <header id="header" class="header">
+            <!-- Contenedor Principal del Header -->
+            <div class="header-main">
+                <div class="container">
+                    <!-- Logo destacado -->
+                    <div class="site-logo">
+                        <a href="/index.html" class="site-logo__link">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="images/logo-mob.png">
+                                <source srcset="images/logo.png">
+                                <img class="site-logo__img" src="images/logo.png" alt="Logo Principal" />
+                            </picture>
+                        </a>
+                    </div>
+
+                    <!-- Información principal y menú -->
+                    <div class="header-mobile">
+                        <!-- Navegación -->
+                        <div class="header-nav">
+                            <div class="nav-toggle">
+                                <span class="nav-toggle__link"></span>
+                                <span class="nav-toggle__link"></span>
+                                <span class="nav-toggle__link"></span>
+                            </div>
+                            <div class="header-nav__container">
+                                <div class="header-nav__menu">
+                                    <nav class="nav">
+                                        <ul class="nav__list">
+                                            <li class="nav__item"><a href="#advantage" class="nav__link"
+                                                    data-section="Advantage">Advantage</a></li>
+                                            <li class="nav__item"><a href="#experiences" class="nav__link"
+                                                    data-section="Experiences">Experiences</a></li>
+                                            <li class="nav__item"><a href="#delivery" class="nav__link"
+                                                    data-section="Delivery">Delivery</a></li>
+                                            <li class="nav__item"><a href="#tastes" class="nav__link"
+                                                    data-section="Tavo">Tavo</a></li>
+                                            <li class="nav__item"><a href="#reviews" class="nav__link"
+                                                    data-section="Reviews">Reviews</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-nav__info">
+                                    <a href="tel:9999912345678">+999 99 1234 5678</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Breadcrumbs debajo del menú -->
+            <div class="breadcrumbs-wrapper">
+                <div class="container">
+                    <nav class="breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="/index.html" class="breadcrumbs__link">Home</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <span class="breadcrumbs__separator">/</span>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <span class="breadcrumbs__current" id="current-breadcrumb">Home</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="sections_per">
+                <section class="sections-one">
+                    <a href="./materias.html" class="section_materias">Materias</a>
+                </section>
+                <section class="sections-two">
+                    <a href="./juegos.html" class="secton_juegos">Juegos</a>
+                </section>
+                <section class="sections-three">
+                    <a href="./proyectos.html" class="section_proyectos">Proyectos</a>
+                </section>
+            </div>
+        </main>
+
+
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><!-- jQuery -->
+<script src="/js/libs.min.js"></script><!-- скрипты библиотек -->
+<script src="/js/main.js"></script><!-- кастомные скрипты -->
+
+</html>
