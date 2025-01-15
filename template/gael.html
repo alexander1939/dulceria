@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gael</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    /* Estilos para el breadcrumb con nueva clase */
+    .custom-breadcrumbs__list {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    .custom-breadcrumbs__list li {
+      margin-right: 10px;
+    }
+
+    .custom-breadcrumbs__list li a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    .custom-breadcrumbs__list li a:hover {
+      text-decoration: underline;
+    }
+
+    .custom-breadcrumbs__list li::after {
+      content: ">";
+      margin-left: 10px;
+    }
+
+    .custom-breadcrumbs__list li:last-child::after {
+      content: "";
+    }
+
+    /* Estilos para el contenido */
+    .content {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Estilos para las tarjetas */
+    .card-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      width: 25%;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      font-size: 20px;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .card a:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gael</h1>
+  <nav>
+    <ul class="custom-breadcrumbs__list">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="gael.html">Gael</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <p>Estás en la página de Gael. Elige una categoría:</p>
+    <div class="card-container">
+      <div class="card">
+        <h3>Materias</h3>
+        <p>Explora las materias ofrecidas: Matemáticas, Inglés, Ciencias.</p>
+        <a href="MateriasGael/materias.html">Ir a Materias</a>
+      </div>
+      <div class="card">
+        <h3>Proyectos</h3>
+        <p>Descubre los proyectos disponibles: Dulcería, Abarrotes, Sala de Cómputo.</p>
+        <a href="proyectos.html">Ir a Proyectos</a>
+      </div>
+      <div class="card">
+        <h3>Juegos</h3>
+        <p>Disfruta de nuestros juegos recomendados: Fortnite, Free Fire, Call of Duty.</p>
+        <a href="juegos.html">Ir a Juegos</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
