@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciencias</title>
+  <link rel="stylesheet" href="/css/libs.min.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header">
+    <!-- Contenedor Principal del Header -->
+    <div class="header-main">
+      <div class="container">
+        <div class="header-mobile">
+          <div class="header-nav">
+            <div class="nav-toggle">
+              <span class="nav-toggle__link"></span>
+              <span class="nav-toggle__link"></span>
+              <span class="nav-toggle__link"></span>
+            </div>
+            <div class="header-nav__container">
+              <div class="header-nav__menu">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="/index.html" class="custom-link" data-section="Home">Home</a></li>
+                        <li class="nav__item"><a href="/template/gael/gael.html" class="custom-link">Ir a Gael</a></li>
+                        <li class="nav__item"><a href="/template/gael/MateriasGael/materias.html" class="custom-link" data-section="Materias">Materias</a></li>
+                        <li class="nav__item"><a href="#tastes" class="custom-link" data-section="Juegos">Juegos</a></li>
+                        <li class="nav__item"><a href="#reviews" class="custom-link" data-section="Proyectos">Proyectos</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="header-nav__info">
+                <a href="tel:9999912345678">+999 99 1234 5678</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <h1>Ciencias</h1>
+  <nav>
+    <ul class="custom-breadcrumbs__list" id="breadcrumbs"></ul>
+  </nav>
+  <div class="content">
+    <h2>Ciencias ofrecidas:</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Biología</h3>
+        <p>Estudia los seres vivos, su anatomía y fisiología.</p>
+        <a href="#">Detalles</a>
+      </div>
+      <div class="card">
+        <h3>Física</h3>
+        <p>Aprende sobre la materia, energía y sus interacciones.</p>
+        <a href="#">Detalles</a>
+      </div>
+      <div class="card">
+        <h3>Química</h3>
+        <p>Explora las reacciones, compuestos y la tabla periódica.</p>
+        <a href="#">Detalles</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const breadcrumbs = document.getElementById("breadcrumbs");
+
+      const navigationFlow = [
+        { label: "Home", url: "/index.html" },
+        { label: "Gael", url: "/template/gael/gael.html" },
+        { label: "Materias", url: "materias.html" },
+        { label: "Ciencias", url: "ciencias.html" }
+      ];
+
+      const currentPath = window.location.pathname;
+
+      navigationFlow.forEach((page) => {
+        const listItem = document.createElement("li");
+        if (currentPath.endsWith(page.url)) {
+          listItem.textContent = page.label;
+        } else {
+          const link = document.createElement("a");
+          link.href = page.url;
+          link.textContent = page.label;
+          listItem.appendChild(link);
+        }
+        breadcrumbs.appendChild(listItem);
+      });
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><!-- jQuery -->
+  <script src="/js/libs.min.js"></script><!-- скрипты библиотек -->
+  <script src="/js/main.js"></script><!-- кастомные скрипты -->
+</body>
+</html>
