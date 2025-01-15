@@ -33,19 +33,21 @@
             background-color: #575757;
         }
         .breadcrumb {
-            font-size: 14px;
+            font-size: 16px;
             margin: 10px 20px;
+            display: none; /* Oculto por defecto */
         }
         .breadcrumb a {
             text-decoration: none;
-            color: #4CAF50;
+            color: blue;
             margin-right: 5px;
         }
         .breadcrumb a:hover {
             text-decoration: underline;
         }
         .breadcrumb span {
-            color: #555;
+            color: black;
+            font-weight: bold;
         }
         section {
             padding: 20px;
@@ -63,23 +65,60 @@
     </header>
 
     <nav>
-        <a href="/index.html">Home</a>
-        <a href="materias.html">Materias</a>
-        <a href="juegos.html">Juegos</a>
-        <a href="proyectos.html">Proyectos</a>
+        <a href="./jesus.html">Home</a>
+        <a href="./materias.html">Materias</a>
+        <a href="./juegos.html">Juegos</a>
+        <a href="./proyectos.html">Proyectos</a>
     </nav>
 
     <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <a href="index.html">Inicio</a> &gt; 
-        <span>Materias</span>
+    <div class="breadcrumb" id="breadcrumb-container">
+        <span id="breadcrumb-content"></span>
     </div>
 
     <main>
-        <section id="materias">
-            <h2>Materias</h2>
-            <p>Aquí puedes encontrar información detallada sobre las materias que estás cursando o has cursado.</p>
+        <section>
+            <h2>Bienvenido</h2>
+            <p>Esta es la página principal de tu sitio web. Explora las secciones disponibles.</p>
         </section>
     </main>
+
+    <script>
+        const breadcrumbContainer = document.getElementById("breadcrumb-container");
+        const breadcrumbContent = document.getElementById("breadcrumb-content");
+        const currentPageTitle = document.title || "Página Principal";
+        const currentPageURL = window.location.pathname;
+        const breadcrumbHistoryKey = "breadcrumbHistory";
+
+        // Obtén el historial actual o inicialízalo
+        let breadcrumbHistory = JSON.parse(localStorage.getItem(breadcrumbHistoryKey)) || [];
+
+        // Filtrar duplicados por URL
+        breadcrumbHistory = breadcrumbHistory.filter(
+            (item, index, self) => index === self.findIndex(i => i.url === item.url)
+        );
+
+        // Agrega la página actual al historial si no está ya
+        if (!breadcrumbHistory.some(item => item.url === currentPageURL)) {
+            breadcrumbHistory.push({ title: currentPageTitle, url: currentPageURL });
+        }
+
+        // Guarda el historial actualizado en localStorage
+        localStorage.setItem(breadcrumbHistoryKey, JSON.stringify(breadcrumbHistory));
+
+        // Genera los enlaces del breadcrumb
+        const breadcrumbLinks = breadcrumbHistory
+            .slice(0, -1) // Excluye la última página (la actual)
+            .map(item => `<a href="${item.url}">${item.title}</a>`)
+            .join(" &gt; ");
+
+        // Muestra el breadcrumb en la página
+        breadcrumbContent.innerHTML = breadcrumbLinks
+            ? `${breadcrumbLinks} &gt; <span>${currentPageTitle}</span>`
+            : `<span>${currentPageTitle}</span>`;
+
+        // Muestra el contenedor del breadcrumb
+        breadcrumbContainer.style.display = "block";
+    </script>
 </body>
 </html>
