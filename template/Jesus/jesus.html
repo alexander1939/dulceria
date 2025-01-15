@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .breadcrumb {
+            font-size: 14px;
+            margin: 10px 20px;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: #4CAF50;
+            margin-right: 5px;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #555;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Navegación del Sitio</h1>
+    </header>
+
+    <nav>
+        <a href="/index.html">Home</a>
+        <a href="materias.html">Materias</a>
+        <a href="juegos.html">Juegos</a>
+        <a href="proyectos.html">Proyectos</a>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Inicio</a> &gt; 
+        <span>Materias</span>
+    </div>
+
+    <main>
+        <section id="materias">
+            <h2>Materias</h2>
+            <p>Aquí puedes encontrar información detallada sobre las materias que estás cursando o has cursado.</p>
+        </section>
+    </main>
+</body>
+</html>
