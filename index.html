@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="es">
 
 <head>
     <!-- partial:parts/_head.html -->
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/libs.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tavo.css">
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- partial -->
@@ -51,10 +52,21 @@
                                             <li class="nav__item">
                                                 <a href="template/gael/gael.html" class="custom-link">Ir a Gael</a>
                                             </li>
-                                            <li class="nav__item"><a href="#delivery" class="nav__link"
-                                                    data-section="Delivery">Delivery</a></li>
-                                            <li class="nav__item"><a href="#tastes" class="nav__link"
-                                                    data-section="Tastes">Tastes</a></li>
+                                            <li class="nav__item"><a href="/template/roberto/roberto.html"
+                                                    class="nav__link" data-section="Delivery">Ir Roberto</a></li>
+                                            <li class="nav__item nav__item--submenu">
+                                                <a href="./template/Tavo/tavo.html" class="nav__link"
+                                                    data-section="Tavo">Tavo</a>
+                                                <ul class="submenu">
+                                                    <li><a href="./template/Tavo/materias/materias.html">Materias</a>
+                                                    </li>
+                                                    <li><a href="./template/Tavo/juegos/juegos.html">Juegos</a></li>
+                                                    <li><a href="./template/Tavo/proyectos/proyectos.html">
+                                                            Proyectos</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
                                             <li class="nav__item"><a href="#reviews" class="nav__link"
                                                     data-section="Reviews">Reviews</a></li>
                                         </ul>
@@ -73,16 +85,8 @@
             <div class="breadcrumbs-wrapper">
                 <div class="container">
                     <nav class="breadcrumbs">
-                        <ul class="breadcrumbs__list">
-                            <li class="breadcrumbs__item">
-                                <a href="index.html" class="breadcrumbs__link">Home</a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <span class="breadcrumbs__separator">/</span>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <span class="breadcrumbs__current" id="current-breadcrumb">Home</span>
-                            </li>
+                        <ul class="breadcrumbs__list" id="breadcrumbs-list">
+                            <!-- El breadcrumb se actualizará aquí -->
                         </ul>
                     </nav>
                 </div>
@@ -385,7 +389,7 @@
                     </div>
                 </div>
             </section>
-            <section id="tastes" class="section section-main__post">
+            <section id="Tavo" class="section section-main__post">
                 <div class="container">
                     <div class="row">
                         <div class="col col_3 col_desktop-12"></div>
@@ -422,7 +426,7 @@
                                                     for 16 pieces
                                                 </span>
                                             </div>
-                                            <button type="button" class="btn btn_secondary">order now</button>
+                                            <a href="./template/Tavo/tavo.html" class="btn btn_secondary">order now</a>
                                         </div>
                                     </div>
                                     <div class="slider-next post-slider__next">

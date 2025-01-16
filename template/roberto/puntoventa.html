@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto de Venta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        .breadcrumbs {
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .breadcrumbs a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 5px;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        .summary {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .summary table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .summary th, .summary td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .summary th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="breadcrumbs">
+        <a href="/index.html">Inicio</a> / 
+        <a href="/template/roberto/roberto.html">Roberto</a> / 
+        <a href="/template/roberto/proyectos.html">Proyectos</a> / 
+        <span>Punto de Venta</span>
+    </div>
+    
+    <h1>Punto de Venta</h1>
+
+    <div class="summary">
+        <table>
+            <tr>
+                <th>Integrantes</th>
+                <th>Lenguaje Programación</th>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>PHP</td>
+
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
