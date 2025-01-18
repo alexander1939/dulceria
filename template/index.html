@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gael</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <div class="menu-container">
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Menú</h2>
+        <button class="close-menu" id="close-menu"><i class="fas fa-times"></i></button>
+      </div>
+      <ul class="menu">
+        <li>
+          <a href="#" class="dropdown-btn"><i class="fas fa-list"></i> Integrantes <i class="fas fa-chevron-down dropdown-icon"></i></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#" class="dropdown-btn"><i class="fas fa-list"></i> Gael <i class="fas fa-chevron-down dropdown-icon"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="/template/gael/MateriasGael/materias.html"><i class="fas fa-folder"></i> Materias</a></li>
+                <li><a href="/template/gael/juegos/juegos.html"><i class="fas fa-folder"></i> Juegos</a></li>
+                <li><a href="/template/gael/proyectos/proyectos.html"><i class="fas fa-folder"></i> Proyectos</a></li>
+              </ul>
+            </li>
+            <li><a href="/template/Tavo/tavo.html"><i class="fas fa-folder"></i> Tavo</a></li>
+            <li><a href="/template/roberto/roberto.html"><i class="fas fa-folder"></i> Roberto</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/template/about.html"><i class="fas fa-info-circle"></i> Acerca de</a></li>
+        <li><a href="/template/contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1><a href="/index.html">
+        <img src="/images/logo.png" alt="Happy Box Logo" class="logo">
+      </a></h1>
+    
+      <nav>
+        <ul class="custom-breadcrumbs__list" id="breadcrumbs"></ul>
+      </nav>
+      <button class="toggle-menu" id="toggle-menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+  
+  <div class="content">
+    <p>Estás en la página de INICIO. Elige un integrante:</p>
+    <div class="card-container">
+      <div class="card">
+        <h3>Gael</h3>
+        <a href="/template/gael/gael.html">Ir a Gael</a>
+      </div>
+      <div class="card">
+        <h3>Tavo</h3>
+        <a href="/template/Tavo/tavo.html">Ir a Tavo</a>
+      </div>
+      <div class="card">
+        <h3>Roberto</h3>
+        <a href="/template/roberto/roberto.html">Ir a Roberto</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const breadcrumbs = document.getElementById("breadcrumbs");
+
+      // Definir el flujo de navegación esperado
+      const navigationFlow = [
+        { label: "Home", url: "/index.html" }
+      ];
+
+      // Obtener la URL actual
+      const currentPath = window.location.pathname;
+
+      // Generar el breadcrumb basado en el flujo
+      navigationFlow.forEach((page, index) => {
+        const listItem = document.createElement("li");
+
+        if (currentPath.endsWith(page.url)) {
+          // Último elemento (no es enlace)
+          listItem.textContent = page.label;
+        } else {
+          // Elementos intermedios (enlaces)
+          const link = document.createElement("a");
+          link.href = page.url;
+          link.textContent = page.label;
+          listItem.appendChild(link);
+        }
+
+        breadcrumbs.appendChild(listItem);
+      });
+    });
+  </script>
+    <script src="/js/sidebar.js"></script>
+</body>
+
+</html>

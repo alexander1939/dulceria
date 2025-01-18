@@ -4,54 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Materias</title>
-  <link rel="stylesheet" href="/css/libs.min.css" />
-  <link rel="stylesheet" href="/css/main.css" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/sidebar.css">
   <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header id="header" class="header">
-    <!-- Contenedor Principal del Header -->
-    <div class="header-main">
-      <div class="container">
-
-        <!-- Información principal y menú -->
-        <div class="header-mobile">
-          <!-- Navegación -->
-          <div class="header-nav">
-            <div class="nav-toggle">
-              <span class="nav-toggle__link"></span>
-              <span class="nav-toggle__link"></span>
-              <span class="nav-toggle__link"></span>
-            </div>
-            <div class="header-nav__container">
-              <div class="header-nav__menu">
-                <nav class="nav">
-                  <ul class="nav__list">
-                    <li class="nav__item"><a href="/index.html" class="custom-link" data-section="Home">Home</a></li>
-                    <li class="nav__item">
-                      <a href="/template/gael/gael.html" class="custom-link">Ir a Gael</a>
-                    </li>
-                    <li class="nav__item"><a href="/template/gael/MateriasGael/matematicas.html" class="custom-link" data-section="Matematicas">Matematicas</a></li>
-                    <li class="nav__item"><a href="/template/gael/MateriasGael/ingles.html" class="custom-link" data-section="Ingles">Ingles</a></li>
-                    <li class="nav__item"><a href="/template/gael/MateriasGael/ciencias.html" class="custom-link" data-section="Ciencias">Ciencias</a></li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="header-nav__info">
-                <a href="tel:9999912345678">+999 99 1234 5678</a>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="menu-container">
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Menú</h2>
+        <button class="close-menu" id="close-menu"><i class="fas fa-times"></i></button>
       </div>
+      <ul class="menu">
+        <li><a href="/template/index.html"><i class="fas fa-home"></i> Inicio</a></li>
+        <li>
+          <a href="#" class="dropdown-btn"><i class="fas fa-list"></i> Integrantes <i class="fas fa-chevron-down dropdown-icon"></i></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#" class="dropdown-btn"><i class="fas fa-list"></i> Gael <i class="fas fa-chevron-down dropdown-icon"></i></a>
+            </li>
+            <li><a href="/template/Tavo/tavo.html"><i class="fas fa-folder"></i> Tavo</a></li>
+            <li><a href="/template/roberto/roberto.html"><i class="fas fa-folder"></i> Roberto</a></li>
+          </ul>
+        </li>
+        <li><a href="/template/about.html"><i class="fas fa-info-circle"></i> Acerca de</a></li>
+        <li><a href="/template/contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+      </ul>
     </div>
-  </header>
-  <h1>Materias</h1>
-  <nav>
-    <ul class="custom-breadcrumbs__list" id="breadcrumbs"></ul>
-  </nav>
+    <div class="content">
+      <h1><a href="/template/index.html">
+        <img src="/images/logo.png" alt="Happy Box Logo" class="logo">
+      </a></h1>
+    
+      <nav>
+        <ul class="custom-breadcrumbs__list" id="breadcrumbs"></ul>
+      </nav>
+      <button class="toggle-menu" id="toggle-menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
   <div class="content">
     <h2>Materias ofrecidas:</h2>
     <div class="card-container">
@@ -106,8 +97,6 @@
       });
     });
   </script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><!-- jQuery -->
-  <script src="/js/libs.min.js"></script><!-- скрипты библиотек -->
-  <script src="/js/main.js"></script><!-- кастомные скрипты -->
+      <script src="/js/sidebar.js"></script>
 </body>
 </html>
